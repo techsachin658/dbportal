@@ -8,3 +8,6 @@ body {
 .heightInPx {
     height: 50px;
 }
+span.insideTd {
+    float: right !important;
+}

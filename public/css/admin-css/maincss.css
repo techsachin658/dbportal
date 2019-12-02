@@ -118,3 +118,35 @@ body {
     height: calc(100vh - 70px);
     margin-top: 70px;
 }
+
+.height30px {
+    height: 30px;
+}
+span.insideTd {
+    float: right;
+}
+.roundBtn {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: red !important;
+}
+.cardContainer {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+.iconC i {
+    font-size: 30px;
+    line-height: 55px;
+}
+select#sel1 {
+    width: 200px;
+    border: 1px solid #e2e2e2;
+    background: #ececec;
+    padding: 5px;
+    margin-top: -5px;
+    font-size: 15px;
+    color: #9c9c9c;
+    font-weight: 500;
+}

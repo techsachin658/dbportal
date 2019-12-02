@@ -18,9 +18,9 @@
                        @include('partials.header')
                        <div class="content">
                             <div class="container-fluid">
-                                  <div class="row">
+                                  
                                          @yield('content')
-                                  </div>
+                                  
                             </div>
                         </div>
                         @include('partials.footer')
@@ -53,7 +53,22 @@
   
    @yield('scripts')
   <script>
-    $(document).ready(function() {
+  $(document).ready(function () {
+    const timeout = 300000;  // 900000 ms = 15 minutes
+    var idleTimer = null;
+    $('*').bind('mousemove click mouseup mousedown keydown keypress keyup submit change mouseenter scroll resize dblclick', function () {
+        clearTimeout(idleTimer);
+
+        idleTimer = setTimeout(function () {
+            document.getElementById('logout-form').submit();
+            console.log("Hello World");
+        }, timeout);
+    });
+    $("body").trigger("mousemove");
+});
+  </script> 
+  <script>
+   
       $().ready(function() {
         $sidebar = $('.sidebar');
 
