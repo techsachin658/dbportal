@@ -24,6 +24,12 @@
               <p>Users List</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+          </li>
           </ul>
       </div>
     </div>

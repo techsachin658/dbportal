@@ -6,14 +6,14 @@
                     <strong><i style="color: #fff;" class="fa fa-check"></i> {{ session('success') }}</strong>
                 </div>
                 @endif
-              <div class="card card-plain">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title mt-0">Users</h4>
-                  
-                </div>
-                <div class="card-body">
+            
+              <div class="tableContainer">
+               <div class="titleContainer">
+                  <h4 class="title">Recent Users</h4>
+               </div>
+                
                   <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table">
                       <thead class="">
                         <tr>
                         <th>S.No</th>
@@ -40,9 +40,11 @@
                                 </form>
                               </span>
                               <span class="insideTd">
-                                    <a href="" rel="tooltip" title="Edit" class="btn btn-primary btn-link btn-sm">
+                                <?php if($user->is_Admin == 0): ?>
+                                    <a href="/user/{{$user->id}}/edit" rel="tooltip" title="Edit" class="btn btn-primary btn-link btn-sm">
                                       <i class="material-icons">edit</i>
                                     </a>
+                                  <?php endif;?>
                               </span>
                             
                             </td>
@@ -54,5 +56,5 @@
                   </div>
                 </div>
               </div>
-            </div>
+            
 @endsection

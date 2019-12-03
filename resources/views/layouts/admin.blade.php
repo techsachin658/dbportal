@@ -10,9 +10,7 @@
         <link href="{{asset('css/admin-css/material-dashboard.min.css')}}" rel="stylesheet" />
         <link rel="stylesheet" href="{{asset('css/admin-css/datetimepicker.css')}}"> 
         <link rel="stylesheet" href="{{asset('css/admin-css/maincss.css')}}">
-		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    </head>
+		    </head>
     <body>
           <div class="wrapper">
                    @include('partials.sidebar')
@@ -56,7 +54,7 @@
    @yield('scripts')
   <script>
   $(document).ready(function () {
-    const timeout = 120000;  // 900000 ms = 15 minutes
+    const timeout = 900000;  // 900000 ms = 15 minutes
     var idleTimer = null;
     $('*').bind('mousemove click mouseup mousedown keydown keypress keyup submit change mouseenter scroll resize dblclick', function () {
         clearTimeout(idleTimer);

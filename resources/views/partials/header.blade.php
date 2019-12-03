@@ -18,11 +18,11 @@
 
 
                 <a class="nav-link" href="" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="username">James McDock</span>     <img class="userImage" src="{{asset('images/admin.jpg')}}" alt="">
+                   <i class="fa fa-angle-down" aria-hidden="true"></i>
+<span class="username">James McDock</span>     <span class="userImage"><img src="{{asset('images/admin.jpg')}}" alt=""></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="{{route('admin.admin-profile',Auth::user()->id)}}">Profile</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();

@@ -18,10 +18,10 @@ Route::get('/', function () {
 Route::get('dashboard', 'AdminController@dashboard')->name('dashboard')->middleware('admin');
 Route::get('users', 'AdminController@users')->name('user')->middleware('admin');
 Route::get('add-user', 'AdminController@adduser')->name('add-user')->middleware('admin');
-Route::get('addNewUser','AdminController@addNewUser')->name('admin.addnewuser');
-Route::post('addNewUser','AdminController@addNewUser')->name('admin.addnewuser');
-
-
+Route::get('addNewUser','AdminController@addNewUser')->name('admin.addnewuser')->middleware('admin');
+Route::post('addNewUser','AdminController@addNewUser')->name('admin.addnewuser')->middleware('admin');
+Route::get('show-user/{id}', 'AdminController@showuser')->name('show-user')->middleware('admin');
+Route::get('admin-profile/{id}','AdminController@adminprofile')->name('admin.admin-profile')->middleware('admin');
 Auth::routes();
 Route::resource('user', 'UserController');
 Route::get('/home', 'HomeController@index')->name('home');
