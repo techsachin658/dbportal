@@ -7,11 +7,13 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
 use Illuminate\Auth\Events\Registered;
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.dashboard');
+        $users = User::all();
+        return view('admin.dashboard',compact('users'));
     }
     public function users(){
         $users = User::all();
@@ -27,13 +29,11 @@ class AdminController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'max:255']
         ]);
-
         $user = new User();
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->password = Hash::make($request['password']);
         $user->save();
-          
         return redirect()->back()->with('success', 'User Added');
     }
 }

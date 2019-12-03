@@ -4,10 +4,65 @@ body {
     color: #636b6f;
     margin: 0;
 }
-
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+font-family: 'Montserrat';
+}
 .heightInPx {
     height: 50px;
 }
-span.insideTd {
-    float: right !important;
+.form-custom-des {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+}
+
+.form-custom-des h1.title {
+    text-align: center; 
+    color: #263238;	
+}
+.form-custom-des .card-body {
+    background-color: #263238;
+    color: #ffff;
+    padding: 30px !important;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);	
+}
+
+.form-custom-des .form-control {
+    border: none;
+}
+
+.form-custom-des button.btn.btn-primary {
+    background-color: #fff;
+    border: none;
+    color: #263238;
+    text-transform: uppercase;
+	font-weight: 600;
+    padding: 10px 25px;
+    letter-spacing: 1px;	
+}
+
+.form-custom-des a.btn.btn-link {
+    color: #fff;
+}
+.form-custom-des .form-group {
+    margin-bottom: 25px;
+}
+/*responsive*/
+@media (max-width:991px){
+	.form-custom-des {
+    width: 80%;
+}
+}
+@media (max-width:480px){
+.form-custom-des {
+    width: 95%;
+}
 }

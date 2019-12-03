@@ -20,7 +20,7 @@ Route::get('users', 'AdminController@users')->name('user')->middleware('admin');
 Route::get('add-user', 'AdminController@adduser')->name('add-user')->middleware('admin');
 Route::get('addNewUser','AdminController@addNewUser')->name('admin.addnewuser');
 Route::post('addNewUser','AdminController@addNewUser')->name('admin.addnewuser');
-Route::get('edit-profile/{$id}','AdminController@edituser')->name('admin.edituser');
+
 
 Auth::routes();
 Route::resource('user', 'UserController');

@@ -29,11 +29,11 @@
                             <td><?=$i++;?></td>
                             <td><?=$user->name?></td>
                             <td><?=$user->email?></td>
-                            <td><?php if($user->is_Admin == 1){echo "Admin";}else{echo "Basic User";}?></td>
+                            <td><?php if($user->is_Admin == 1){echo "Super Admin";}else{echo "Basic User";}?></td>
                            
                                <td class="td-actions text-right">
                                    <span class="insideTd">   
-                            <form onsubmit="return confirm('Are you sure you want to delete this Raffle?');" action="{{ route('user.destroy',$user->id) }}" method="POST">
+                            <form onsubmit="return confirm('Are you sure you want to delete this user?');" action="{{ route('user.destroy',$user->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" rel="tooltip" title="Delete Raffle" class="btn btn-danger  btn-sm roundBtn"><i class="material-icons myIcon">close</i></button>
